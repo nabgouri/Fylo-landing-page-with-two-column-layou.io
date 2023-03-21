@@ -1,0 +1,271 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* remove under line tag */
+a {
+  text-decoration: none;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  color: hsl(243, 87%, 12%);
+  font-size: 2rem;
+}
+header,
+cta {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+header {
+  padding: 3em 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-items {
+  display: flex;
+  gap: 2.5em;
+}
+.di-flex {
+  display: flex;
+  align-items: center;
+  padding: 2em 0;
+}
+.illustration-1 {
+  width: 50%;
+}
+.second-content {
+  background-image: url(./images/bg-curve-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2em 0;
+}
+.cta {
+  color: #fff;
+  background-color: hsl(224, 93%, 58%);
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 2.5em;
+  margin-left: 1em;
+}
+.cta:hover,
+.demonstration:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+.sign-bar {
+  width: 50%;
+  padding: 0.5em 0 0.5em 1em;
+}
+p {
+  margin: 1em 0;
+}
+.demonstration {
+  color: hsl(170, 45%, 43%);
+  border-bottom: 2px solid hsl(170, 45%, 43%);
+}
+.quote {
+  margin-top: 1.5em;
+  background: #fff;
+  width: 65%;
+  padding: 1.5em;
+  border-radius: 10px;
+}
+.bi-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.avatar-testimonial {
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+}
+.quote-text {
+  margin-top: 0.5em;
+}
+.third-content {
+  background-color: hsl(238, 22%, 44%);
+  padding: 4em 0;
+}
+.third-content__text {
+  color: #fff;
+  width: 44%;
+}
+.register-action {
+  width: 35%;
+}
+.third-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.cta-v2 {
+  margin: 1rem 0 0 0;
+  padding-inline: 2em;
+}
+.email-bar {
+  padding: 0.7em 0 0.7em 0.5em;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color: #fff;
+  padding: 5em 0;
+}
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10em; */
+}
+footer a {
+  color: #fff;
+}
+.social-media {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  margin-left: 0.5em;
+}
+li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.logo-inner {
+  fill: #fff;
+  margin-bottom: 1em;
+}
+li:nth-child(1),
+li:nth-child(2) {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 940px) {
+  .di-flex,
+  .third-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .illustration-1 {
+    width: 100%;
+    order: 0;
+    margin-bottom: 2rem;
+  }
+  .main-content__text,
+  .info-text,
+  .third-content__text {
+    order: 1;
+    text-align: center;
+  }
+  .quote {
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+  .register-action {
+    order: 2;
+    margin-top: 1.5em;
+  }
+  .sign-bar,
+  .cta {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .footer_inner {
+    display: block;
+  }
+  ul:not(:last-child) {
+    margin-bottom: 3em;
+  }
+  .social-apps {
+    text-align: center;
+  }
+}
