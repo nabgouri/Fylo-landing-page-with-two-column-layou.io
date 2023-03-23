@@ -213,20 +213,20 @@ footer a {
   height: 100%;
   margin-left: 0.5em;
 }
-li:not(:last-child) {
+.footer_inner li:not(:last-child) {
   margin-bottom: 1rem;
 }
 .logo-inner {
   fill: #fff;
   margin-bottom: 1em;
 }
-li:nth-child(1),
-li:nth-child(2) {
+.footer_inner li:nth-child(1),
+.footer_inner li:nth-child(2) {
   display: flex;
   gap: 1rem;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 904px) {
   .di-flex,
   .third-flex {
     display: flex;
@@ -243,14 +243,20 @@ li:nth-child(2) {
   .third-content__text {
     order: 1;
     text-align: center;
+    width: 100%;
+  }
+  .info-text p {
+    text-align: start;
   }
   .quote {
+    text-align: left;
     margin: 0 auto;
     margin-top: 2em;
   }
   .register-action {
     order: 2;
     margin-top: 1.5em;
+    width: 60%;
   }
   .sign-bar,
   .cta {
@@ -267,5 +273,20 @@ li:nth-child(2) {
   }
   .social-apps {
     text-align: center;
+  }
+  .bi-flex {
+    justify-content: flex-start;
+    gap: 1.6rem;
+  }
+  .container {
+    max-width: 914px;
+  }
+}
+@media (max-width: 520px) {
+  .nav-items {
+    width: 60%;
+  }
+  .nav img {
+    width: 30%;
   }
 }
